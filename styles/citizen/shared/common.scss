@@ -75,3 +75,20 @@ a.image:hover:not(.lazy):not(.new) > img {
   background-color: $color-emphasized;
   opacity: $opacity-icon-base;
 }
+
+// Used for highlighting (anchor) target table row. Just add "highlighttable" to your table's class attribute.
+table.highlighttable {
+  tr, td {
+    &:target {
+      animation: highlighttable 3s ease-in-out;
+    }
+  }
+}
+@keyframes highlighttable {
+    from {
+        background-color: rgba(255, 255, 0, 0.3);
+    }
+    to {
+        background-color: rgba(255, 255, 0, 0);
+    }
+}
